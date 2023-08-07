@@ -31,7 +31,7 @@ function skipWhitespace(text, i) {
 }
 
 // parse cnf format instance
-function parse(text) {
+function parse_cnf(text) {
   var clauses = [];
   var i = 0;
   var maxVar = 0;
@@ -121,7 +121,7 @@ function getTruthValue(input) {
 }
 
 function loadInput() {
-  clauses = parse(inputElement.getValue());
+  clauses = parse_cnf(inputElement.getValue());
   resetAssignment();
 }
 
