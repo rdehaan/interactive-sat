@@ -190,6 +190,8 @@ function renderOutput() {
   clearOutput();
   var num_literals_assigned = Object.keys(assignment).length;
   addToOutput("Number of literals assigned: " + num_literals_assigned + "\n");
+  var assignment_list = Object.keys(assignment).map(varnum => assignment[varnum].positive ? varnum : -1*varnum);
+  addToOutput("Assignment: [" + assignment_list + "]\n");
   var num_clauses_true = 0;
   var num_clauses_false = 0;
   var num_clauses_open = 0;
