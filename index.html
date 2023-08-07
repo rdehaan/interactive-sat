@@ -1,0 +1,87 @@
+<!--
+This file is released under the MIT license.
+See LICENSE.md.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Interactive SAT</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/display.css">
+  <link rel="stylesheet" href="css/sudoku.css">
+</head>
+
+<body>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post">
+
+        <header class="post-header">
+          <h1 class="post-title">Interactive SAT</h1>
+        </header>
+
+        <div class="post-content">
+          <div class="center">
+
+            <p><b>Instructions:</b></p>
+
+            <p>Try to make the following CNF formula true by setting the right literals to true.<br />You can make a literal true by clicking on it.</p>
+
+            <div>&nbsp;</div>
+
+            <p>
+              <b>Formula:</b>
+            </p>
+
+            <div id="formula"></div>
+
+            <input type="button" id="run" value="Reset" onclick="resetAssignment()"/>
+
+            <div>&nbsp;</div>
+
+            <div>
+              <b>Result:</b>
+            </div>
+
+            <pre id="output" class="code"></pre>
+
+            <div>&nbsp;</div>
+
+            <div>
+              <b>Load CNF formula:</b>
+            </div>
+
+            <pre id="input">
+1 2 3 0
+1 2 -3 0
+1 -2 3 0
+1 -2 -3 0
+-1 2 3 0
+-1 2 -3 0
+-1 -2 3 0
+-1 -2 -3 0</pre>
+
+            <input type="button" id="run" value="Load" onclick="loadInput()"/>
+
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- <script type="text/javascript" src="js/sudoku.js" charset="utf-8"></script> -->
+  <script type="text/javascript" src="js/ace.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/interface.js"></script>
+
+</body>
+
+</html>
