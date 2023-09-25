@@ -29,13 +29,23 @@ See LICENSE.md.
         </header>
 
         <div class="post-content">
-          <div class="center">
+          <div>
 
-            <p><b>Instructions:</b></p>
+            <p>
+              In this demonstration, you can try to find a satisfying truth assignment for a CNF formula yourself. The animation shows which literals and clauses are made true and false. Red indicates that a literal or clause is made false, green indicates that they are made true, and blue indicates that neither is the case (yet).
+            </p>
 
-            <p>Try to make the following CNF formula true by setting the right literals to true.<br />You can make a literal true by clicking on it.</p>
+            <p>
+              Enter a CNF formula in DIMACS format, in the bottom.<br />
+              Click "Load" to update the displayed clauses.
+            </p>
+
+            <p>Then try to make the CNF formula true by setting the right literals to true.<br />You can make a literal true by clicking on it.</p>
 
             <div>&nbsp;</div>
+
+          </div>
+          <div class="center">
 
             <p>
               <b>Formula:</b>
@@ -44,6 +54,9 @@ See LICENSE.md.
             <div id="formula"></div>
 
             <input type="button" id="run" value="Reset" onclick="resetAssignment()"/>
+
+          </div>
+          <div>
 
             <div>&nbsp;</div>
 
